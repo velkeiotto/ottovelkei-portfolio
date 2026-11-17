@@ -97,6 +97,7 @@
   .thumb img { width: 100%; height: 100%; object-fit: cover; }
   .thumb::after { content: ""; position: absolute; left: 50%; top: 50%; width: 58px; height: 58px; margin: -29px 0 0 -29px; border-radius: 50%; background: rgba(255,255,255,.92) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M8 5v14l11-7z' fill='%23232323'/%3E%3C/svg%3E") 55% 50% / 26px no-repeat; box-shadow: 0 6px 18px rgba(0,0,0,.25); }
   .film .meta { padding: 12px 16px 14px; }
+  .film.ext .thumb::after { background-color: rgba(255,255,255,.92); }
   .film .meta b { display: block; font-size: 16px; }
   .film .meta span { font-size: 13px; color: var(--mute); }
   h4.sub { font-size: 14px; font-weight: 800; letter-spacing: 1.4px; text-transform: uppercase; margin-top: 40px; color: var(--mute); }
@@ -109,6 +110,9 @@
   .stack { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
   .stack span { background: var(--card); border-radius: 999px; padding: 6px 14px; font-size: 14px; font-weight: 700; }
 
+  .siteprev { display: block; position: relative; margin-top: 24px; border-radius: 18px; overflow: hidden; max-width: 760px; box-shadow: 0 16px 40px rgba(0,0,0,.12); }
+  .siteprev img { width: 100%; }
+  .siteprev span { position: absolute; right: 14px; bottom: 14px; background: var(--dark); color: #fff; font-weight: 800; font-size: 14px; padding: 7px 14px; border-radius: 999px; }
   .more-link { font-weight: 800; color: var(--acc); white-space: nowrap; }
 
   /* contact */
@@ -217,7 +221,7 @@
     </article>
 
     <article class="case">
-      <div class="media logo"><img src="img/lemonart.png" alt="LEMONart logó" loading="lazy"></div>
+      <a class="media" href="https://lemonart.hu/" target="_blank" rel="noopener"><img src="img/prev/site-lemonart.jpg" alt="A lemonart.hu kezdőlapja" loading="lazy" style="object-position: top"></a>
       <div class="body">
         <div class="tag">LEMONart · 2022–2025 · alapító, tartalomgyártási vezető</div>
         <h3>Saját ügyfélszerzés egy induló ügynökségnek</h3>
@@ -258,15 +262,15 @@
     <h4 class="sub">Aftermovie-k</h4>
     <div class="grid">
       <button class="film" data-yt="8RRUMS14_CM"><div class="thumb"><img src="img/refs/8RRUMS14_CM.jpg" alt="" loading="lazy"></div><div class="meta"><b>Céges karácsony</b><span>aftermovie · 3:46</span></div></button>
-      <button class="film" data-yt="0DhaZ3jojQg"><div class="thumb"><img src="img/refs/0DhaZ3jojQg.jpg" alt="" loading="lazy"></div><div class="meta"><b>Művészeti fesztivál</b><span>aftermovie · 1:50</span></div></button>
+      <a class="film ext" href="https://www.youtube.com/watch?v=0DhaZ3jojQg" target="_blank" rel="noopener"><div class="thumb"><img src="img/refs/0DhaZ3jojQg.jpg" alt="" loading="lazy"></div><div class="meta"><b>Művészeti fesztivál</b><span>aftermovie · 1:50 · YouTube-on ↗</span></div></a>
       <button class="film" data-yt="eoHFh1SIFlI"><div class="thumb"><img src="img/refs/eoHFh1SIFlI.jpg" alt="" loading="lazy"></div><div class="meta"><b>Nyitóbuli</b><span>aftermovie · 1:24</span></div></button>
-      <button class="film" data-yt="Mo7zlerDaHo"><div class="thumb"><img src="img/refs/Mo7zlerDaHo.jpg" alt="" loading="lazy"></div><div class="meta"><b>Ifjúsági fesztivál</b><span>aftermovie · 1:59</span></div></button>
-      <button class="film" data-yt="Ty4lKxnPxD0"><div class="thumb"><img src="img/refs/Ty4lKxnPxD0.jpg" alt="" loading="lazy"></div><div class="meta"><b>Csapatépítő</b><span>aftermovie · 4:14</span></div></button>
+      <a class="film ext" href="https://www.youtube.com/watch?v=Mo7zlerDaHo" target="_blank" rel="noopener"><div class="thumb"><img src="img/refs/Mo7zlerDaHo.jpg" alt="" loading="lazy"></div><div class="meta"><b>Ifjúsági fesztivál</b><span>aftermovie · 1:59 · YouTube-on ↗</span></div></a>
+      <a class="film ext" href="https://www.youtube.com/watch?v=Ty4lKxnPxD0" target="_blank" rel="noopener"><div class="thumb"><img src="img/refs/Ty4lKxnPxD0.jpg" alt="" loading="lazy"></div><div class="meta"><b>Csapatépítő</b><span>aftermovie · 4:14 · YouTube-on ↗</span></div></a>
     </div>
 
     <h4 class="sub">Reklám</h4>
     <div class="grid">
-      <button class="film" data-yt="Sd1O7PkeVOM"><div class="thumb"><img src="img/szalon.png" alt="" loading="lazy"></div><div class="meta"><b>Pécsi Szalon Sör</b><span>TV-reklám · rendezés, vágás, médiavásárlás</span></div></button>
+      <a class="film ext" href="https://www.youtube.com/watch?v=Sd1O7PkeVOM" target="_blank" rel="noopener"><div class="thumb"><img src="img/szalon.png" alt="" loading="lazy"></div><div class="meta"><b>Pécsi Szalon Sör</b><span>TV-reklám · rendezés, vágás, médiavásárlás · YouTube-on ↗</span></div></a>
     </div>
   </div>
 </section>
@@ -276,6 +280,7 @@
     <div class="eyebrow">AI és rendszerek</div>
     <h2 class="display">Amit magam építek</h2>
     <p class="intro">2026-ban AI segítségével egyedül fejlesztettem le egy marketing- és ügyfélkezelő rendszert kisvállalkozásoknak: lead-kezelés, ajánlatkészítés, automata email- és SMS-sorozatok, landingoldalak mérésekkel, Meta Pixel és Conversions API. Az alábbi termékvideókat is én készítettem, kódból. <a class="more-link" href="https://mingello.com" target="_blank" rel="noopener">mingello.com ↗</a></p>
+    <a class="siteprev" href="https://mingello.com" target="_blank" rel="noopener"><img src="img/prev/site-mingello.jpg" alt="A mingello.com kezdőlapja" loading="lazy"><span>mingello.com ↗</span></a>
     <div class="ai">
       <figure class="clip"><video src="video/1-tudasbazis-script.mp4" muted loop playsinline preload="none" aria-label="Termékvideó: tudásbázis és forgatókönyv"></video><p>Tudásbázisból videós forgatókönyv</p></figure>
       <figure class="clip"><video src="video/2-tolcser-uzleti-terv.mp4" muted loop playsinline preload="none" aria-label="Termékvideó: tölcsér és üzleti terv"></video><p>Marketingtölcsér és üzleti terv</p></figure>

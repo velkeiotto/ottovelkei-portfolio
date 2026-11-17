@@ -39,6 +39,12 @@
 
   .photos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 24px; }
   .photos img { width: 100%; aspect-ratio: 3/2; object-fit: cover; border-radius: 14px; }
+  .reels { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 20px; }
+  .reels a { background: var(--card); border-radius: 14px; overflow: hidden; text-decoration: none; }
+  .reels a:hover { box-shadow: inset 0 0 0 2px var(--ink); }
+  .reels img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+  .reels b { display: block; font-size: 15px; padding: 10px 14px 0; }
+  .reels span { display: block; font-size: 13px; color: var(--mute); padding: 0 14px 12px; }
   .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
   .chip { background: var(--card); border-radius: 999px; padding: 6px 14px; font-size: 15px; font-weight: 700; text-decoration: none; }
   a.chip:hover { background: var(--lemon); }
@@ -49,7 +55,9 @@
   .tvc:focus-visible { outline: 3px solid var(--acc); outline-offset: 3px; }
 
   .press { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 24px; }
-  .press a { background: var(--card); border-radius: 16px; padding: 18px 20px; text-decoration: none; display: block; }
+  .press a { background: var(--card); border-radius: 16px; padding: 0 0 18px; text-decoration: none; display: block; overflow: hidden; }
+  .press img { width: 100%; aspect-ratio: 16/8; object-fit: cover; margin-bottom: 14px; }
+  .press small, .press b { padding: 0 20px; }
   .press a:hover { box-shadow: inset 0 0 0 2px var(--ink); }
   .press small { display: block; font-size: 13px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--mute); }
   .press b { display: block; font-size: 17px; line-height: 1.35; margin-top: 4px; }
@@ -58,7 +66,8 @@
   .goal .pill { background: var(--lemon); font-weight: 800; padding: 6px 14px; border-radius: 999px; font-size: 15px; }
 
   .vids { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-top: 18px; }
-  .vids a { background: var(--card); border-radius: 14px; padding: 14px 12px; text-decoration: none; text-align: center; }
+  .vids a { background: var(--card); border-radius: 14px; padding: 0 0 12px; text-decoration: none; text-align: center; overflow: hidden; }
+  .vids img { width: 100%; aspect-ratio: 9/14; object-fit: cover; margin-bottom: 10px; background: #ddd; }
   .vids a:hover { box-shadow: inset 0 0 0 2px var(--ink); }
   .vids b { display: block; font-family: 'Anton', Impact, sans-serif; font-weight: 400; font-size: 28px; line-height: 1; }
   .vids span { display: block; font-size: 13px; color: var(--mute); margin-top: 6px; }
@@ -79,6 +88,11 @@
   .pcard dl { display: grid; grid-template-columns: auto auto; gap: 6px 14px; margin-top: 14px; font-size: 15px; }
   .pcard dt { color: #bdbbb5; }
   .pcard dd { font-weight: 800; text-align: right; }
+  .pthumbs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 16px; }
+  .pthumbs img { width: 100%; aspect-ratio: 9/14; object-fit: cover; border-radius: 8px; }
+  .pavatar { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .pavatar img { width: 40px; height: 40px; border-radius: 50%; }
+  .pavatar .tag { margin-bottom: 0; }
   .pcard a { display: inline-block; margin-top: 14px; color: var(--lemon); font-weight: 800; font-size: 15px; }
   table { width: 100%; border-collapse: collapse; background: var(--card); border-radius: 18px; overflow: hidden; font-size: 15px; }
   caption { text-align: left; font-weight: 800; font-size: 15px; padding: 0 0 8px; }
@@ -112,6 +126,7 @@
     .press, .meta2 { grid-template-columns: 1fr; }
     .vids { grid-template-columns: repeat(3, 1fr); }
     .platform { grid-template-columns: 1fr; }
+    .reels { grid-template-columns: repeat(2, 1fr); }
     .summary { padding: 26px 22px; }
     table { font-size: 14px; }
     th, td { padding: 8px 10px; }
@@ -166,10 +181,10 @@
     <div class="eyebrow">03 · PR</div>
     <h2 class="display">Megjelenések</h2>
     <div class="press">
-      <a href="https://nlc.hu/csalad/20251203/az-ajandek-ami-osszehozza-a-csaladot-ujra-hodit-a-puzzle/" target="_blank" rel="noopener"><small>Nők Lapja Café</small><b>Az ajándék, ami összehozza a családot – újra hódít a puzzle</b></a>
-      <a href="https://24.hu/elet-stilus/2025/12/11/magyar-marka-lett-az-idei-karacsony-egyik-meglepetes-sikere-ezert-rajonganak-a-fa-puzzle-okert/" target="_blank" rel="noopener"><small>24.hu</small><b>Magyar márka lett az idei karácsony egyik meglepetés sikere</b></a>
-      <a href="https://ng.24.hu/egyeb/2025/12/03/igy-valik-a-puzzle-a-termeszet-kapujava-allatok-inspiraljak-egy-magyar-marka-kulonleges-fa-kirakoit-x/" target="_blank" rel="noopener"><small>National Geographic</small><b>Így válik a puzzle a természet kapujává</b></a>
-      <a href="https://www.szeretlekmagyarorszag.hu/eletstilus/egy-magyar-marka-amely-ujra-osszehozza-a-csaladokat-ismerd-meg-a-puzzies-sikertortenetet/" target="_blank" rel="noopener"><small>Szeretlek Magyarország</small><b>Egy magyar márka, amely újra összehozza a családokat</b></a>
+      <a href="https://nlc.hu/csalad/20251203/az-ajandek-ami-osszehozza-a-csaladot-ujra-hodit-a-puzzle/" target="_blank" rel="noopener"><img src="img/prev/pr-nlc.jpg" alt="" loading="lazy"><small>Nők Lapja Café</small><b>Az ajándék, ami összehozza a családot – újra hódít a puzzle</b></a>
+      <a href="https://24.hu/elet-stilus/2025/12/11/magyar-marka-lett-az-idei-karacsony-egyik-meglepetes-sikere-ezert-rajonganak-a-fa-puzzle-okert/" target="_blank" rel="noopener"><img src="img/prev/pr-24.jpg" alt="" loading="lazy"><small>24.hu</small><b>Magyar márka lett az idei karácsony egyik meglepetés sikere</b></a>
+      <a href="https://ng.24.hu/egyeb/2025/12/03/igy-valik-a-puzzle-a-termeszet-kapujava-allatok-inspiraljak-egy-magyar-marka-kulonleges-fa-kirakoit-x/" target="_blank" rel="noopener"><img src="img/prev/pr-ng.jpg" alt="" loading="lazy"><small>National Geographic</small><b>Így válik a puzzle a természet kapujává</b></a>
+      <a href="https://www.szeretlekmagyarorszag.hu/eletstilus/egy-magyar-marka-amely-ujra-osszehozza-a-csaladokat-ismerd-meg-a-puzzies-sikertortenetet/" target="_blank" rel="noopener"><img src="img/prev/pr-szm.jpg" alt="" loading="lazy"><small>Szeretlek Magyarország</small><b>Egy magyar márka, amely újra összehozza a családokat</b></a>
     </div>
   </section>
 
@@ -177,15 +192,15 @@
     <div class="eyebrow">04 · Influencerek</div>
     <h2 class="display">Influencer-együttműködések</h2>
     <p class="intro">Több whitelisting videó bekerült a legjobban teljesítő PPC-hirdetések közé. A kampány egyik legfontosabb tanulsága: megéri influencerekkel dolgozni.</p>
-    <div class="chips">
-      <a class="chip" href="https://www.instagram.com/reel/DSDNhYZDTGO/" target="_blank" rel="noopener">Sápi Vivien ↗</a>
-      <a class="chip" href="https://www.instagram.com/reel/DSCZo-8AsM8/" target="_blank" rel="noopener">Szigligeti Ivett ↗</a>
-      <a class="chip" href="https://www.instagram.com/reel/DSAuG9aiZ7B/" target="_blank" rel="noopener">Szűcs Dávid ↗</a>
-      <a class="chip" href="https://www.instagram.com/reel/DSUqA3aiHx1/" target="_blank" rel="noopener">Bódi Dóra ↗</a>
-      <a class="chip" href="https://www.instagram.com/reel/DRuWNCTjAiB/" target="_blank" rel="noopener">Burján Fanni ↗</a>
-      <a class="chip" href="https://www.instagram.com/reel/DSK7sVeiMKk/" target="_blank" rel="noopener">Tóbi Nikoletta ↗</a>
-      <a class="chip" href="https://www.instagram.com/reel/DSSv5Y4iDDN/" target="_blank" rel="noopener">Tóbi Nikoletta (2.) ↗</a>
-      <a class="chip" href="https://www.instagram.com/reel/DSCV9KzDWH2/" target="_blank" rel="noopener">Miló mesebirodalma ↗</a>
+    <div class="reels">
+      <a href="https://www.instagram.com/reel/DSDNhYZDTGO/" target="_blank" rel="noopener"><img src="img/prev/ig-sapi.jpg" alt="" loading="lazy"><b>Sápi Vivien</b><span>Instagram reel ↗</span></a>
+      <a href="https://www.instagram.com/reel/DSCZo-8AsM8/" target="_blank" rel="noopener"><img src="img/prev/ig-szigligeti.jpg" alt="" loading="lazy"><b>Szigligeti Ivett</b><span>Instagram reel ↗</span></a>
+      <a href="https://www.instagram.com/reel/DSAuG9aiZ7B/" target="_blank" rel="noopener"><img src="img/prev/ig-szucs.jpg" alt="" loading="lazy"><b>Szűcs Dávid</b><span>Instagram reel ↗</span></a>
+      <a href="https://www.instagram.com/reel/DSUqA3aiHx1/" target="_blank" rel="noopener"><img src="img/prev/ig-bodi.jpg" alt="" loading="lazy"><b>Bódi Dóra</b><span>Instagram reel ↗</span></a>
+      <a href="https://www.instagram.com/reel/DRuWNCTjAiB/" target="_blank" rel="noopener"><img src="img/prev/ig-burjan.jpg" alt="" loading="lazy"><b>Burján Fanni</b><span>Instagram reel ↗</span></a>
+      <a href="https://www.instagram.com/reel/DSK7sVeiMKk/" target="_blank" rel="noopener"><img src="img/prev/ig-tobi1.jpg" alt="" loading="lazy"><b>Tóbi Nikoletta</b><span>Instagram reel ↗</span></a>
+      <a href="https://www.instagram.com/reel/DSSv5Y4iDDN/" target="_blank" rel="noopener"><img src="img/prev/ig-tobi2.jpg" alt="" loading="lazy"><b>Tóbi Nikoletta (2.)</b><span>Instagram reel ↗</span></a>
+      <a href="https://www.instagram.com/reel/DSCV9KzDWH2/" target="_blank" rel="noopener"><img src="img/prev/ig-milo.jpg" alt="" loading="lazy"><b>Miló mesebirodalma</b><span>Instagram reel ↗</span></a>
     </div>
   </section>
 
@@ -196,16 +211,16 @@
 
     <h3 class="sub">Top 10 videó</h3>
     <div class="vids">
-      <a href="https://www.tiktok.com/@puzzieshungary/video/7582275856504982816" target="_blank" rel="noopener"><b>647K</b><span>megtekintés ↗</span></a>
-      <a href="https://www.tiktok.com/@puzzieshungary/video/7582306379671604512" target="_blank" rel="noopener"><b>275K</b><span>megtekintés ↗</span></a>
-      <a href="https://www.tiktok.com/@puzzieshungary/video/7582213720449748256" target="_blank" rel="noopener"><b>242K</b><span>megtekintés ↗</span></a>
-      <a href="https://www.tiktok.com/@puzzieshungary/video/7580389159605456160" target="_blank" rel="noopener"><b>206K</b><span>megtekintés ↗</span></a>
-      <a href="https://www.tiktok.com/@puzzieshungary/video/7584845752342482209" target="_blank" rel="noopener"><b>155K</b><span>megtekintés ↗</span></a>
-      <a href="https://www.tiktok.com/@puzzieshungary/video/7584524955803487520" target="_blank" rel="noopener"><b>129K</b><span>megtekintés ↗</span></a>
-      <a href="https://www.tiktok.com/@puzzieshungary/video/7584007009859652896" target="_blank" rel="noopener"><b>109K</b><span>megtekintés ↗</span></a>
-      <a href="https://www.tiktok.com/@puzzieshungary/video/7582677428032638240" target="_blank" rel="noopener"><b>109K</b><span>megtekintés ↗</span></a>
-      <a href="https://www.tiktok.com/@puzzieshungary/video/7581131051162963232" target="_blank" rel="noopener"><b>105K</b><span>megtekintés ↗</span></a>
-      <a href="https://www.tiktok.com/@puzzieshungary/video/7582615696643738913" target="_blank" rel="noopener"><b>105K</b><span>megtekintés ↗</span></a>
+      <a href="https://www.tiktok.com/@puzzieshungary/video/7582275856504982816" target="_blank" rel="noopener"><img src="img/puzzies/tt/7582275856504982816.jpg" alt="" loading="lazy"><b>647K</b><span>megtekintés ↗</span></a>
+      <a href="https://www.tiktok.com/@puzzieshungary/video/7582306379671604512" target="_blank" rel="noopener"><img src="img/puzzies/tt/7582306379671604512.jpg" alt="" loading="lazy"><b>275K</b><span>megtekintés ↗</span></a>
+      <a href="https://www.tiktok.com/@puzzieshungary/video/7582213720449748256" target="_blank" rel="noopener"><img src="img/puzzies/tt/7582213720449748256.jpg" alt="" loading="lazy"><b>242K</b><span>megtekintés ↗</span></a>
+      <a href="https://www.tiktok.com/@puzzieshungary/video/7580389159605456160" target="_blank" rel="noopener"><img src="img/puzzies/tt/7580389159605456160.jpg" alt="" loading="lazy"><b>206K</b><span>megtekintés ↗</span></a>
+      <a href="https://www.tiktok.com/@puzzieshungary/video/7584845752342482209" target="_blank" rel="noopener"><img src="img/puzzies/tt/7584845752342482209.jpg" alt="" loading="lazy"><b>155K</b><span>megtekintés ↗</span></a>
+      <a href="https://www.tiktok.com/@puzzieshungary/video/7584524955803487520" target="_blank" rel="noopener"><img src="img/puzzies/tt/7584524955803487520.jpg" alt="" loading="lazy"><b>129K</b><span>megtekintés ↗</span></a>
+      <a href="https://www.tiktok.com/@puzzieshungary/video/7584007009859652896" target="_blank" rel="noopener"><img src="img/puzzies/tt/7584007009859652896.jpg" alt="" loading="lazy"><b>109K</b><span>megtekintés ↗</span></a>
+      <a href="https://www.tiktok.com/@puzzieshungary/video/7582677428032638240" target="_blank" rel="noopener"><img src="img/puzzies/tt/7582677428032638240.jpg" alt="" loading="lazy"><b>109K</b><span>megtekintés ↗</span></a>
+      <a href="https://www.tiktok.com/@puzzieshungary/video/7581131051162963232" target="_blank" rel="noopener"><img src="img/puzzies/tt/7581131051162963232.jpg" alt="" loading="lazy"><b>105K</b><span>megtekintés ↗</span></a>
+      <a href="https://www.tiktok.com/@puzzieshungary/video/7582615696643738913" target="_blank" rel="noopener"><img src="img/puzzies/tt/7582615696643738913.jpg" alt="" loading="lazy"><b>105K</b><span>megtekintés ↗</span></a>
     </div>
     <div class="notes">
       <h4>Mit tanultunk a legjobb videókból</h4>
@@ -219,16 +234,16 @@
 
     <h3 class="sub">Bottom 10 videó</h3>
     <div class="vids low">
-      <a href="https://www.tiktok.com/@puzzieshungary/video/7578966328975871264" target="_blank" rel="noopener"><b>1K</b><span>megtekintés ↗</span></a>
-      <a href="https://www.tiktok.com/@puzzieshungary/video/7579275580198194464" target="_blank" rel="noopener"><b>3K</b><span>megtekintés ↗</span></a>
-      <a href="https://www.tiktok.com/@puzzieshungary/video/7579530687104044321" target="_blank" rel="noopener"><b>3K</b><span>megtekintés ↗</span></a>
-      <a href="https://www.tiktok.com/@puzzieshungary/video/7581409279299603744" target="_blank" rel="noopener"><b>3K</b><span>megtekintés ↗</span></a>
-      <a href="https://www.tiktok.com/@puzzieshungary/video/7582151638362721569" target="_blank" rel="noopener"><b>4K</b><span>megtekintés ↗</span></a>
-      <a href="https://www.tiktok.com/@puzzieshungary/video/7581935456665881888" target="_blank" rel="noopener"><b>4K</b><span>megtekintés ↗</span></a>
-      <a href="https://www.tiktok.com/@puzzieshungary/video/7579924923448036641" target="_blank" rel="noopener"><b>5K</b><span>megtekintés ↗</span></a>
-      <a href="https://www.tiktok.com/@puzzieshungary/video/7581780462843039009" target="_blank" rel="noopener"><b>6K</b><span>megtekintés ↗</span></a>
-      <a href="https://www.tiktok.com/@puzzieshungary/video/7582244693182926113" target="_blank" rel="noopener"><b>6K</b><span>megtekintés ↗</span></a>
-      <a href="https://www.tiktok.com/@puzzieshungary/video/7580079858840079648" target="_blank" rel="noopener"><b>7K</b><span>megtekintés ↗</span></a>
+      <a href="https://www.tiktok.com/@puzzieshungary/video/7578966328975871264" target="_blank" rel="noopener"><img src="img/puzzies/tt/7578966328975871264.jpg" alt="" loading="lazy"><b>1K</b><span>megtekintés ↗</span></a>
+      <a href="https://www.tiktok.com/@puzzieshungary/video/7579275580198194464" target="_blank" rel="noopener"><img src="img/puzzies/tt/7579275580198194464.jpg" alt="" loading="lazy"><b>3K</b><span>megtekintés ↗</span></a>
+      <a href="https://www.tiktok.com/@puzzieshungary/video/7579530687104044321" target="_blank" rel="noopener"><img src="img/puzzies/tt/7579530687104044321.jpg" alt="" loading="lazy"><b>3K</b><span>megtekintés ↗</span></a>
+      <a href="https://www.tiktok.com/@puzzieshungary/video/7581409279299603744" target="_blank" rel="noopener"><img src="img/puzzies/tt/7581409279299603744.jpg" alt="" loading="lazy"><b>3K</b><span>megtekintés ↗</span></a>
+      <a href="https://www.tiktok.com/@puzzieshungary/video/7582151638362721569" target="_blank" rel="noopener"><img src="img/puzzies/tt/7582151638362721569.jpg" alt="" loading="lazy"><b>4K</b><span>megtekintés ↗</span></a>
+      <a href="https://www.tiktok.com/@puzzieshungary/video/7581935456665881888" target="_blank" rel="noopener"><img src="img/puzzies/tt/7581935456665881888.jpg" alt="" loading="lazy"><b>4K</b><span>megtekintés ↗</span></a>
+      <a href="https://www.tiktok.com/@puzzieshungary/video/7579924923448036641" target="_blank" rel="noopener"><img src="img/puzzies/tt/7579924923448036641.jpg" alt="" loading="lazy"><b>5K</b><span>megtekintés ↗</span></a>
+      <a href="https://www.tiktok.com/@puzzieshungary/video/7581780462843039009" target="_blank" rel="noopener"><img src="img/puzzies/tt/7581780462843039009.jpg" alt="" loading="lazy"><b>6K</b><span>megtekintés ↗</span></a>
+      <a href="https://www.tiktok.com/@puzzieshungary/video/7582244693182926113" target="_blank" rel="noopener"><img src="img/puzzies/tt/7582244693182926113.jpg" alt="" loading="lazy"><b>6K</b><span>megtekintés ↗</span></a>
+      <a href="https://www.tiktok.com/@puzzieshungary/video/7580079858840079648" target="_blank" rel="noopener"><img src="img/puzzies/tt/7580079858840079648.jpg" alt="" loading="lazy"><b>7K</b><span>megtekintés ↗</span></a>
     </div>
     <div class="notes">
       <h4>Mit tanultunk a leggyengébb videókból</h4>
@@ -246,9 +261,10 @@
 
     <div class="platform">
       <div class="pcard">
-        <div class="tag">TOP PLATFORM</div>
+        <div class="pavatar"><img src="img/prev/pf-yt.jpg" alt=""><div class="tag">TOP PLATFORM</div></div>
         <h3>YouTube Shorts</h3>
         <dl><dt>Megtekintés</dt><dd>1 523 284</dd><dt>Interakció</dt><dd>41 033</dd><dt>Átl. nézési idő</dt><dd>35,9 mp</dd></dl>
+        <div class="pthumbs"><img src="img/puzzies/tt/7582275856504982816.jpg" alt="" loading="lazy"><img src="img/puzzies/tt/7582306379671604512.jpg" alt="" loading="lazy"><img src="img/puzzies/tt/7582213720449748256.jpg" alt="" loading="lazy"></div>
         <a href="https://www.youtube.com/@puzzieshu/shorts" target="_blank" rel="noopener">Puzzies Shorts ↗</a>
       </div>
       <div>
@@ -284,6 +300,7 @@
       <div class="pcard">
         <h3>TikTok</h3>
         <dl><dt>Megtekintés</dt><dd>1 959 020</dd><dt>Interakció</dt><dd>47 175</dd><dt>Átl. nézési idő</dt><dd>5,1 mp</dd><dt>Boost-költés</dt><dd>440 000 Ft</dd></dl>
+        <div class="pthumbs"><img src="img/puzzies/tt/7580389159605456160.jpg" alt="" loading="lazy"><img src="img/puzzies/tt/7584845752342482209.jpg" alt="" loading="lazy"><img src="img/puzzies/tt/7584524955803487520.jpg" alt="" loading="lazy"></div>
         <a href="https://www.tiktok.com/@puzzieshungary" target="_blank" rel="noopener">@puzzieshungary ↗</a>
       </div>
       <div>
@@ -317,11 +334,13 @@
       <div class="pcard">
         <h3>Facebook</h3>
         <dl><dt>Megtekintés</dt><dd>435 862</dd><dt>Interakció</dt><dd>6 193</dd></dl>
+        <div class="pthumbs"><img src="img/puzzies/tt/7584007009859652896.jpg" alt="" loading="lazy"><img src="img/puzzies/tt/7582677428032638240.jpg" alt="" loading="lazy"><img src="img/puzzies/tt/7581131051162963232.jpg" alt="" loading="lazy"></div>
         <a href="https://www.facebook.com/puzzieshu/reels/" target="_blank" rel="noopener">Puzzies Reels ↗</a>
       </div>
       <div class="pcard">
         <h3>Instagram</h3>
         <dl><dt>Megtekintés</dt><dd>217 705</dd><dt>Interakció</dt><dd>8 220</dd></dl>
+        <div class="pthumbs"><img src="img/prev/ig-sapi.jpg" alt="" loading="lazy"><img src="img/prev/ig-bodi.jpg" alt="" loading="lazy"><img src="img/prev/ig-tobi2.jpg" alt="" loading="lazy"></div>
       </div>
     </div>
     <div class="notes">
