@@ -8,7 +8,7 @@
 <meta name="robots" content="noindex">
 <meta property="og:title" content="Velkei Ottó – portfólió">
 <meta property="og:description" content="Marketingvezető · kampányok, videós gyártás, AI-alapú marketingrendszerek">
-<meta property="og:image" content="img/refs/gdr2qHdloy8.jpg">
+<meta property="og:image" content="img/otto-forgatas.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -34,15 +34,16 @@
   nav .btn { padding: 8px 16px; font-size: 14px; }
 
   /* hero */
-  .hero { position: relative; overflow: hidden; }
-  .hero .wrap { display: grid; grid-template-columns: 1.15fr .85fr; align-items: end; gap: 24px; min-height: 560px; padding-top: 56px; }
+  .hero { position: relative; }
+  .hero .wrap { display: grid; grid-template-columns: 1.2fr .8fr; align-items: center; gap: 48px; padding-top: 64px; padding-bottom: 8px; }
   .hero .panel { position: absolute; right: 0; top: 0; bottom: 0; width: 40%; background: var(--dark); clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 100%); }
-  .hero h1 { font-size: clamp(64px, 9vw, 112px); line-height: 1.06; }
+  .hero h1 { font-size: clamp(64px, 9vw, 112px); line-height: 1.16; }
   .hero .role { font-size: 20px; font-weight: 800; margin-top: 14px; }
   .hero .lead { font-size: 19px; color: var(--mute); max-width: 560px; margin-top: 18px; }
-  .hero .cta { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0 56px; }
-  .hero .photo { position: relative; z-index: 1; align-self: end; }
-  .hero .photo img { width: 100%; max-width: 560px; margin-left: auto; }
+  .hero .cta { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0 0; }
+  .hero .photo { position: relative; justify-self: end; width: 100%; max-width: 420px; }
+  .hero .photo img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 28px; box-shadow: 0 24px 60px rgba(35,35,35,.22); transform: rotate(2deg); }
+  .hero .photo figcaption { position: absolute; left: -14px; bottom: 26px; background: var(--lemon); color: var(--ink); font-weight: 800; font-size: 14px; padding: 8px 14px; border-radius: 999px; box-shadow: 0 8px 20px rgba(0,0,0,.15); }
 
   /* numbers */
   .nums { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 56px 0 0; }
@@ -125,9 +126,8 @@
   @media (max-width: 860px) {
     nav ul { display: none; }
     .hero .wrap { grid-template-columns: 1fr; min-height: 0; padding-top: 32px; }
-    .hero .panel { width: 100%; top: auto; height: 300px; clip-path: polygon(0 18%, 100% 0, 100% 100%, 0 100%); }
-    .hero .cta { margin-bottom: 8px; }
-    .hero .photo img { max-width: 440px; margin: 0 auto; }
+    .hero .photo { justify-self: center; max-width: 340px; margin-top: 8px; }
+    .hero .photo figcaption { left: -6px; }
     .nums { grid-template-columns: repeat(2, 1fr); }
     .num b { font-size: 32px; }
     .case, .featured { grid-template-columns: 1fr; }
@@ -159,7 +159,6 @@
 </nav>
 
 <header class="hero" id="top">
-  <div class="panel" aria-hidden="true"></div>
   <div class="wrap">
     <div>
       <div class="eyebrow">Portfólió · 2026</div>
@@ -171,7 +170,7 @@
         <a class="btn ghost" href="#filmek">Filmek megnézése</a>
       </div>
     </div>
-    <div class="photo"><img src="img/otto.png" alt="Velkei Ottó" width="945" height="576"></div>
+    <figure class="photo"><img src="img/otto-forgatas.webp" alt="Velkei Ottó forgatás közben, kamerával" width="534" height="534"><figcaption>Forgatáson</figcaption></figure>
   </div>
 </header>
 
