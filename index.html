@@ -89,12 +89,12 @@
   .featured blockquote { margin-top: 20px; padding-left: 16px; border-left: 3px solid var(--lemon); font-size: 15px; color: #f1efe9; }
   .featured blockquote cite { display: block; font-style: normal; font-size: 13px; color: #a9a7a2; margin-top: 6px; }
   .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 16px; margin-top: 20px; }
-  .film { all: unset; cursor: pointer; display: block; background: var(--card); border-radius: 16px; overflow: hidden; transition: transform .15s; }
+  .film { all: unset; cursor: pointer; display: flex; flex-direction: column; justify-content: flex-start; background: var(--card); border-radius: 16px; overflow: hidden; transition: transform .15s; }
   .film:hover { transform: translateY(-2px); }
   .film:focus-visible { outline: 3px solid var(--acc); outline-offset: 3px; }
   .thumb { position: relative; aspect-ratio: 16/9; background: #111; overflow: hidden; }
   .featured .thumb { aspect-ratio: auto; height: 100%; min-height: 320px; }
-  .thumb img { width: 100%; height: 100%; object-fit: cover; }
+  .thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
   .thumb::after { content: ""; position: absolute; left: 50%; top: 50%; width: 58px; height: 58px; margin: -29px 0 0 -29px; border-radius: 50%; background: rgba(255,255,255,.92) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M8 5v14l11-7z' fill='%23232323'/%3E%3C/svg%3E") 55% 50% / 26px no-repeat; box-shadow: 0 6px 18px rgba(0,0,0,.25); }
   .film .meta { padding: 12px 16px 14px; }
   .film.ext .thumb::after { background-color: rgba(255,255,255,.92); }
@@ -105,6 +105,7 @@
   /* AI */
   .ai { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; margin-top: 28px; }
   .clip { background: var(--card); border-radius: 16px; overflow: hidden; }
+  .clip video { pointer-events: none; }
   .clip video { width: 100%; aspect-ratio: 16/9; object-fit: cover; background: #111; }
   .clip p { padding: 12px 16px 14px; font-size: 15px; font-weight: 700; }
   .stack { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
@@ -266,11 +267,10 @@
     <div class="eyebrow">AI és rendszerek</div>
     <h2 class="display">Amit magam építek</h2>
     <p class="intro">2026-ban AI segítségével egyedül fejlesztettem le egy marketing- és ügyfélkezelő rendszert kisvállalkozásoknak: lead-kezelés, ajánlatkészítés, automata email- és SMS-sorozatok, landingoldalak mérésekkel, Meta Pixel és Conversions API. Az alábbi termékvideókat is én készítettem, kódból. <a class="more-link" href="https://mingello.com" target="_blank" rel="noopener">mingello.com ↗</a></p>
-    <a class="siteprev" href="https://mingello.com" target="_blank" rel="noopener"><img src="img/prev/site-mingello.jpg" alt="A mingello.com kezdőlapja" loading="lazy"><span>mingello.com ↗</span></a>
     <div class="ai">
-      <figure class="clip"><video src="video/1-tudasbazis-script.mp4" muted loop playsinline preload="none" aria-label="Termékvideó: tudásbázis és forgatókönyv"></video><p>Tudásbázisból videós forgatókönyv</p></figure>
-      <figure class="clip"><video src="video/2-tolcser-uzleti-terv.mp4" muted loop playsinline preload="none" aria-label="Termékvideó: tölcsér és üzleti terv"></video><p>Marketingtölcsér és üzleti terv</p></figure>
-      <figure class="clip"><video src="video/3-lead-ajanlat.mp4" muted loop playsinline preload="none" aria-label="Termékvideó: lead és ajánlat"></video><p>Lead-kezelés és ajánlatkészítés</p></figure>
+      <figure class="clip"><video src="video/1-tudasbazis-script.mp4" autoplay muted loop playsinline preload="auto" aria-label="Termékvideó: tudásbázis és forgatókönyv"></video><p>Tudásbázisból videós forgatókönyv</p></figure>
+      <figure class="clip"><video src="video/2-tolcser-uzleti-terv.mp4" autoplay muted loop playsinline preload="auto" aria-label="Termékvideó: tölcsér és üzleti terv"></video><p>Marketingtölcsér és üzleti terv</p></figure>
+      <figure class="clip"><video src="video/3-lead-ajanlat.mp4" autoplay muted loop playsinline preload="auto" aria-label="Termékvideó: lead és ajánlat"></video><p>Lead-kezelés és ajánlatkészítés</p></figure>
     </div>
   </div>
 </section>
@@ -311,14 +311,6 @@
   dlg.addEventListener('click', e => { if (e.target === dlg) close(); });
   dlg.addEventListener('close', () => { frame.innerHTML = ''; });
 
-  // Termékvideók: csak akkor töltenek és játszanak, amikor látszanak
-  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const io = new IntersectionObserver(entries => entries.forEach(en => {
-    const v = en.target;
-    if (en.isIntersecting) { if (v.preload === 'none') { v.preload = 'auto'; } if (!reduce) v.play().catch(() => {}); }
-    else v.pause();
-  }), { threshold: .35 });
-  document.querySelectorAll('.clip video').forEach(v => { if (reduce) v.controls = true; io.observe(v); });
 </script>
 </body>
 </html>
