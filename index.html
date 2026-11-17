@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Velkei Ottó – portfólió</title>
+<meta name="description" content="Velkei Ottó marketingvezető portfóliója: esettanulmányok, imázsfilmek, aftermovie-k, TV-reklám, dokumentumfilm és AI-alapú marketingrendszerek.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Velkei Ottó – portfólió">
+<meta property="og:description" content="Marketingvezető · kampányok, videós gyártás, AI-alapú marketingrendszerek">
+<meta property="og:image" content="img/refs/gdr2qHdloy8.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --bg: #e2e1dd; --ink: #232323; --mute: #5b5954; --line: #c9c7c2; --card: #ffffff; --acc: #1f5a2c; --dark: #232323; --lemon: #ffd84d; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--ink); font-family: 'Manrope', system-ui, sans-serif; font-size: 17px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+  img, video { display: block; max-width: 100%; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+  .display { font-family: 'Anton', Impact, sans-serif; font-weight: 400; letter-spacing: .5px; text-transform: uppercase; line-height: .95; }
+
+  /* nav */
+  nav { position: sticky; top: 0; z-index: 20; background: rgba(226,225,221,.88); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; gap: 16px; }
+  nav .logo { font-family: 'Anton', Impact, sans-serif; font-size: 22px; text-decoration: none; letter-spacing: .5px; }
+  nav ul { display: flex; gap: 22px; list-style: none; font-size: 14px; font-weight: 700; }
+  nav ul a { text-decoration: none; opacity: .75; }
+  nav ul a:hover { opacity: 1; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; background: var(--dark); color: #fff; text-decoration: none; font-weight: 700; font-size: 15px; padding: 12px 20px; border-radius: 999px; transition: transform .15s; }
+  .btn:hover { transform: translateY(-1px); }
+  .btn.ghost { background: transparent; color: var(--ink); border: 1.5px solid var(--ink); }
+  nav .btn { padding: 8px 16px; font-size: 14px; }
+
+  /* hero */
+  .hero { position: relative; overflow: hidden; }
+  .hero .wrap { display: grid; grid-template-columns: 1.15fr .85fr; align-items: end; gap: 24px; min-height: 560px; padding-top: 56px; }
+  .hero .panel { position: absolute; right: 0; top: 0; bottom: 0; width: 40%; background: var(--dark); clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 100%); }
+  .hero h1 { font-size: clamp(64px, 9vw, 112px); line-height: 1.06; }
+  .hero .role { font-size: 20px; font-weight: 800; margin-top: 14px; }
+  .hero .lead { font-size: 19px; color: var(--mute); max-width: 560px; margin-top: 18px; }
+  .hero .cta { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0 56px; }
+  .hero .photo { position: relative; z-index: 1; align-self: end; }
+  .hero .photo img { width: 100%; max-width: 560px; margin-left: auto; }
+
+  /* numbers */
+  .nums { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 56px 0 0; }
+  .num { background: var(--card); border-radius: 18px; padding: 20px 22px; }
+  .num b { display: block; font-family: 'Anton', Impact, sans-serif; font-weight: 400; font-size: 40px; line-height: 1; }
+  .num span { display: block; color: var(--mute); font-size: 14px; margin-top: 8px; line-height: 1.4; }
+
+  section.block { padding: 88px 0 0; }
+  .eyebrow { font-size: 13px; font-weight: 800; letter-spacing: 1.6px; text-transform: uppercase; color: var(--acc); }
+  h2.display { font-size: clamp(40px, 6vw, 72px); margin-top: 8px; }
+  .intro { color: var(--mute); max-width: 680px; margin-top: 14px; font-size: 18px; }
+
+  /* cases */
+  .case { display: grid; grid-template-columns: 1fr 1fr; gap: 0; background: var(--card); border-radius: 24px; overflow: hidden; margin-top: 32px; }
+  .case.flip .media { order: 2; }
+  .case .media { background: #111; min-height: 360px; position: relative; }
+  .case .media img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
+  .case .media.shots { background: #f1efe9; display: flex; align-items: center; justify-content: center; gap: 14px; padding: 28px; }
+  .case .media.shots img { position: static; height: auto; object-fit: contain; border-radius: 10px; box-shadow: 0 12px 30px rgba(0,0,0,.18); }
+  .case .media.shots .d { width: 72%; }
+  .case .media.shots .m { width: 22%; }
+  .case .media.logo { background: #f1efe9; display: flex; align-items: center; justify-content: center; }
+  .case .media.logo img { position: static; width: 46%; height: auto; }
+  .case .body { padding: 36px 38px; }
+  .case .tag { font-size: 13px; font-weight: 800; color: var(--mute); text-transform: uppercase; letter-spacing: 1.2px; }
+  .case h3 { font-size: 28px; line-height: 1.15; margin-top: 6px; font-weight: 800; }
+  .case .big { font-family: 'Anton', Impact, sans-serif; font-size: 52px; line-height: 1; color: var(--acc); margin-top: 18px; }
+  .case .bigl { color: var(--mute); font-size: 15px; margin-top: 4px; }
+  .case dl { margin-top: 20px; display: grid; gap: 12px; }
+  .case dt { font-size: 12px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; color: var(--mute); }
+  .case dd { font-size: 16px; }
+  .case .more { display: inline-block; margin-top: 20px; font-weight: 800; color: var(--acc); }
+
+  /* films */
+  .featured { margin-top: 32px; display: grid; grid-template-columns: 1.35fr 1fr; gap: 0; background: var(--dark); color: #fff; border-radius: 24px; overflow: hidden; }
+  .featured .body { padding: 36px 38px; }
+  .featured h3 { font-size: 30px; line-height: 1.15; font-weight: 800; }
+  .featured p { color: #cfcdc8; margin-top: 12px; }
+  .featured blockquote { margin-top: 20px; padding-left: 16px; border-left: 3px solid var(--lemon); font-size: 15px; color: #f1efe9; }
+  .featured blockquote cite { display: block; font-style: normal; font-size: 13px; color: #a9a7a2; margin-top: 6px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 16px; margin-top: 20px; }
+  .film { all: unset; cursor: pointer; display: block; background: var(--card); border-radius: 16px; overflow: hidden; transition: transform .15s; }
+  .film:hover { transform: translateY(-2px); }
+  .film:focus-visible { outline: 3px solid var(--acc); outline-offset: 3px; }
+  .thumb { position: relative; aspect-ratio: 16/9; background: #111; overflow: hidden; }
+  .featured .thumb { aspect-ratio: auto; height: 100%; min-height: 320px; }
+  .thumb img { width: 100%; height: 100%; object-fit: cover; }
+  .thumb::after { content: ""; position: absolute; left: 50%; top: 50%; width: 58px; height: 58px; margin: -29px 0 0 -29px; border-radius: 50%; background: rgba(255,255,255,.92) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M8 5v14l11-7z' fill='%23232323'/%3E%3C/svg%3E") 55% 50% / 26px no-repeat; box-shadow: 0 6px 18px rgba(0,0,0,.25); }
+  .film .meta { padding: 12px 16px 14px; }
+  .film .meta b { display: block; font-size: 16px; }
+  .film .meta span { font-size: 13px; color: var(--mute); }
+  h4.sub { font-size: 14px; font-weight: 800; letter-spacing: 1.4px; text-transform: uppercase; margin-top: 40px; color: var(--mute); }
+
+  /* AI */
+  .ai { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; margin-top: 28px; }
+  .clip { background: var(--card); border-radius: 16px; overflow: hidden; }
+  .clip video { width: 100%; aspect-ratio: 16/9; object-fit: cover; background: #111; }
+  .clip p { padding: 12px 16px 14px; font-size: 15px; font-weight: 700; }
+  .stack { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+  .stack span { background: var(--card); border-radius: 999px; padding: 6px 14px; font-size: 14px; font-weight: 700; }
+
+  /* contact */
+  footer { margin-top: 96px; background: var(--dark); color: #fff; }
+  footer .wrap { padding-top: 72px; padding-bottom: 56px; }
+  footer h2 { font-size: clamp(44px, 7vw, 88px); }
+  footer p { color: #cfcdc8; margin-top: 14px; max-width: 560px; }
+  footer .links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+  footer .btn { background: var(--lemon); color: var(--ink); }
+  footer .btn.ghost { background: transparent; color: #fff; border-color: #fff; }
+  footer small { display: block; margin-top: 56px; color: #8d8b86; font-size: 13px; }
+
+  /* lightbox */
+  dialog { border: 0; padding: 0; background: transparent; width: min(1100px, 94vw); max-width: none; }
+  dialog::backdrop { background: rgba(10,10,10,.86); }
+  dialog .frame { position: relative; aspect-ratio: 16/9; background: #000; border-radius: 12px; overflow: hidden; }
+  dialog iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  dialog .close { position: absolute; top: -46px; right: 0; background: none; border: 0; color: #fff; font: 700 15px 'Manrope', sans-serif; cursor: pointer; padding: 8px; }
+  dialog .yt { display: block; color: #ddd; font-size: 14px; margin-top: 10px; text-align: right; }
+
+  @media (max-width: 860px) {
+    nav ul { display: none; }
+    .hero .wrap { grid-template-columns: 1fr; min-height: 0; padding-top: 32px; }
+    .hero .panel { width: 100%; top: auto; height: 300px; clip-path: polygon(0 18%, 100% 0, 100% 100%, 0 100%); }
+    .hero .cta { margin-bottom: 8px; }
+    .hero .photo img { max-width: 440px; margin: 0 auto; }
+    .nums { grid-template-columns: repeat(2, 1fr); }
+    .num b { font-size: 32px; }
+    .case, .featured { grid-template-columns: 1fr; }
+    .case.flip .media { order: 0; }
+    .case .media { min-height: 230px; }
+    .case .media.shots { padding: 18px; }
+    .case .body, .featured .body { padding: 26px 22px; }
+    .case .big { font-size: 42px; }
+    .featured .thumb { min-height: 0; aspect-ratio: 16/9; }
+    section.block { padding-top: 64px; }
+  }
+  @media (max-width: 420px) { .wrap { padding: 0 16px; } .ai { grid-template-columns: 1fr; } }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn, .film { transition: none; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top">VELKEI OTTÓ</a>
+    <ul>
+      <li><a href="#esetek">Esettanulmányok</a></li>
+      <li><a href="#filmek">Filmek</a></li>
+      <li><a href="#ai">AI és rendszerek</a></li>
+      <li><a href="#kapcsolat">Kapcsolat</a></li>
+    </ul>
+    <a class="btn" href="Velkei_Otto_CV.pdf" download>CV letöltése</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="panel" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Portfólió · 2026</div>
+      <h1 class="display">Velkei<br>Ottó</h1>
+      <div class="role">Marketingvezető · Marketingstratéga</div>
+      <p class="lead">Egy kézben tartom a stratégiát, a kreatív gyártást, a hirdetést és a mérést, a munkámban pedig napi szinten használok AI-eszközöket. Itt azt mutatom meg, ami ebből kijött: számokkal és filmekkel.</p>
+      <div class="cta">
+        <a class="btn" href="#esetek">Esettanulmányok</a>
+        <a class="btn ghost" href="#filmek">Filmek megnézése</a>
+      </div>
+    </div>
+    <div class="photo"><img src="img/otto.png" alt="Velkei Ottó" width="945" height="576"></div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="nums">
+    <div class="num"><b>~100 M Ft</b><span>éves árbevétel a saját ügynökségemmel (LEMONart)</span></div>
+    <div class="num"><b>2-szeres</b><span>karácsonyi online rendelés a Puzzies-nél: 15&nbsp;000 → 30&nbsp;000</span></div>
+    <div class="num"><b>150+</b><span>ügyfél kampánya, köztük Siemens Energy, Algida, Grundfos</span></div>
+    <div class="num"><b>4,9 M Ft</b><span>bevétel 137&nbsp;000&nbsp;Ft hirdetésből egy ügyfélnél, saját rendszerrel</span></div>
+  </div>
+</div>
+
+<section class="block" id="esetek">
+  <div class="wrap">
+    <div class="eyebrow">Esettanulmányok</div>
+    <h2 class="display">Ami kijött belőle</h2>
+    <p class="intro">Három eset, három különböző feladat: egy országos szezonális kampány, egy prémium képzés ügyfélszerzése kis keretből és egy ügynökség saját leadgépe.</p>
+
+    <article class="case">
+      <div class="media"><img src="img/puzzies-metro.jpg" alt="Puzzies karácsonyi plakát a budapesti metróban" loading="lazy"></div>
+      <div class="body">
+        <div class="tag">Puzzies Hungary · 2025 · Senior Social Strategist</div>
+        <h3>Karácsonyi kampány, amely megduplázta a rendeléseket</h3>
+        <div class="big">15 000 → 30 000</div>
+        <div class="bigl">online rendelés a 2 hónapos szezonban</div>
+        <dl>
+          <dt>Feladat</dt><dd>A karácsonyi szezon online eladásainak növelése 2 hónap alatt.</dd>
+          <dt>Megoldás</dt><dd>Integrált kampány: 70 social videó 4 platformon, 59 köztéri és plázamegjelenés, 10 televíziós megjelenés, 4 PR-cikk és influencerek. A 7 fős stábot egy általam felépített Notion-rendszerben irányítottam, napi szinten.</dd>
+          <dt>Eredmény</dt><dd>30&nbsp;000 rendelés, 4 millió videómegtekintés és 100&nbsp;000 interakció a 3 hetes fő szakaszban.</dd>
+        </dl>
+        <a class="more" href="https://defiant-repair-b19.notion.site/2025-PUZZIES-KAR-CSONYI-KAMP-NY-EREDM-NYEK-2d8a2aa2ee8780a58835e8157bfa4cf2" target="_blank" rel="noopener">A teljes kampányriport →</a>
+      </div>
+    </article>
+
+    <article class="case flip">
+      <div class="media shots">
+        <img class="d" src="img/wiesner-coach-landing-desktop.webp" alt="A Wiesner &amp; Snír coachképzés landingoldala asztali nézetben" loading="lazy">
+        <img class="m" src="img/wiesner-coach-landing-mobile.webp" alt="A landingoldal mobilon" loading="lazy">
+      </div>
+      <div class="body">
+        <div class="tag">Wiesner &amp; Snír Academy · 2026 · saját rendszerrel</div>
+        <h3>Prémium képzés ügyfélszerzése kis hirdetési keretből</h3>
+        <div class="big">4,9 M Ft</div>
+        <div class="bigl">nettó bevétel 137&nbsp;000&nbsp;Ft hirdetési költésből, 3 hónap alatt</div>
+        <dl>
+          <dt>Feladat</dt><dd>Kiszámítható jelentkezők egy prémium coachképzésre, kis költségvetésből.</dd>
+          <dt>Megoldás</dt><dd>Landingoldal, Meta-hirdetések, automata email- és SMS-sorozat és lead-követés, mind a saját fejlesztésű marketingrendszeremben (Mingello).</dd>
+          <dt>Eredmény</dt><dd>88 érdeklődő, 7 beiratkozó, 1 érdeklődő ~1&nbsp;560&nbsp;Ft-ba került.</dd>
+        </dl>
+        <a class="more" href="https://wiesnersnir.mingello.com/coachkepzes" target="_blank" rel="noopener">Az élő landingoldal →</a>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="media logo"><img src="img/lemonart.png" alt="LEMONart logó" loading="lazy"></div>
+      <div class="body">
+        <div class="tag">LEMONart · 2022–2025 · alapító, kampányvezető</div>
+        <h3>Egy induló ügynökség saját leadgépe</h3>
+        <div class="big">100–150 lead / hó</div>
+        <div class="bigl">2 éven át, kb. 4&nbsp;000–6&nbsp;000&nbsp;Ft/lead</div>
+        <dl>
+          <dt>Feladat</dt><dd>Folyamatos ügyfélszerzés egy induló tartalommarketing-ügynökségnek.</dd>
+          <dt>Megoldás</dt><dd>Saját hirdetési és tartalommarketing-rendszer havi 600&nbsp;000&nbsp;Ft-os kerettel, mérésre építve.</dd>
+          <dt>Eredmény</dt><dd>150+ ügyfél (köztük Siemens Energy, Algida, Grundfos, Metrodom, Indepack), évi ~100 millió Ft árbevétel és 10 fős kreatív csapat. 2025-ben a cégirányítást átadtam a Follow Marketingnek.</dd>
+        </dl>
+        <a class="more" href="https://lemonart.hu/" target="_blank" rel="noopener">lemonart.hu →</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="block" id="filmek">
+  <div class="wrap">
+    <div class="eyebrow">Filmek</div>
+    <h2 class="display">Rendezés, operatőri munka, vágás</h2>
+    <p class="intro">Tíz éve videózom: segédoperatőrként kezdtem, dolgoztam az M4 Sport magazinműsorain, azóta pedig rendezőként készítek imázsfilmeket, aftermovie-kat, reklámot és dokumentumfilmet. Kattints egy filmre a lejátszáshoz.</p>
+
+    <div class="featured">
+      <button class="film thumb" data-yt="gdr2qHdloy8" aria-label="Grafton – 30 év imázsfilm lejátszása" style="border-radius:0"><img src="img/refs/gdr2qHdloy8.jpg" alt="Grafton – 30 év" loading="lazy"></button>
+      <div class="body">
+        <div class="eyebrow" style="color:var(--lemon)">Kiemelt imázsfilm</div>
+        <h3>Grafton – 30 év, több ezer megváltoztatott élet</h3>
+        <p>A Grafton Recruitment 30. évfordulójára készült film a cégről és arról, milyen ott dolgozni. Egy nap forgatás, másnapra kész film.</p>
+        <blockquote>„A projekteket nem a script megírásával kezdi, hanem az ügyfél megértésével.”<cite>Tőzsér Anna, marketing specialist – Gi Group Holding</cite></blockquote>
+        <blockquote>„Már az első pillanatban érezte, hogy milyen tematikát szeretnénk a videóval, milyen hangulatot szeretnénk megalkotni.”<cite>Farkas Tamás, Business Manager – Grafton</cite></blockquote>
+      </div>
+    </div>
+
+    <h4 class="sub">Imázsfilmek</h4>
+    <div class="grid">
+      <button class="film" data-yt="2HyxL93i1Mc"><div class="thumb"><img src="img/refs/2HyxL93i1Mc.jpg" alt="" loading="lazy"></div><div class="meta"><b>Wamatec Hungary</b><span>imázsfilm · 2:14</span></div></button>
+      <button class="film" data-yt="vC-sdMN28F0"><div class="thumb"><img src="img/refs/vC-sdMN28F0.jpg" alt="" loading="lazy"></div><div class="meta"><b>Techoffice</b><span>imázsfilm · 1:56</span></div></button>
+      <button class="film" data-yt="aj1-f99I4AQ"><div class="thumb"><img src="img/refs/aj1-f99I4AQ.jpg" alt="" loading="lazy"></div><div class="meta"><b>Szabóméz</b><span>imázsfilm · 2:45</span></div></button>
+      <button class="film" data-yt="A4ZLX-U6qDk"><div class="thumb"><img src="img/refs/A4ZLX-U6qDk.jpg" alt="" loading="lazy"></div><div class="meta"><b>Rapidtető</b><span>imázsfilm · 2:05</span></div></button>
+    </div>
+
+    <h4 class="sub">Aftermovie-k</h4>
+    <div class="grid">
+      <button class="film" data-yt="8RRUMS14_CM"><div class="thumb"><img src="img/refs/8RRUMS14_CM.jpg" alt="" loading="lazy"></div><div class="meta"><b>Céges karácsony</b><span>aftermovie · 3:46</span></div></button>
+      <button class="film" data-yt="0DhaZ3jojQg"><div class="thumb"><img src="img/refs/0DhaZ3jojQg.jpg" alt="" loading="lazy"></div><div class="meta"><b>Művészeti fesztivál</b><span>aftermovie · 1:50</span></div></button>
+      <button class="film" data-yt="eoHFh1SIFlI"><div class="thumb"><img src="img/refs/eoHFh1SIFlI.jpg" alt="" loading="lazy"></div><div class="meta"><b>Nyitóbuli</b><span>aftermovie · 1:24</span></div></button>
+      <button class="film" data-yt="Mo7zlerDaHo"><div class="thumb"><img src="img/refs/Mo7zlerDaHo.jpg" alt="" loading="lazy"></div><div class="meta"><b>Ifjúsági fesztivál</b><span>aftermovie · 1:59</span></div></button>
+      <button class="film" data-yt="Ty4lKxnPxD0"><div class="thumb"><img src="img/refs/Ty4lKxnPxD0.jpg" alt="" loading="lazy"></div><div class="meta"><b>Csapatépítő</b><span>aftermovie · 4:14</span></div></button>
+    </div>
+
+    <h4 class="sub">Reklám és dokumentumfilm</h4>
+    <div class="grid">
+      <button class="film" data-yt="Sd1O7PkeVOM"><div class="thumb"><img src="img/szalon.png" alt="" loading="lazy"></div><div class="meta"><b>Pécsi Szalon Sör</b><span>TV-reklám · rendezés, vágás, médiavásárlás</span></div></button>
+      <button class="film" data-yt="0kTje_qanhY"><div class="thumb"><img src="img/kispal.png" alt="" loading="lazy"></div><div class="meta"><b>Kispál és a Borz</b><span>dokumentumfilm · féléves forgatás, rendezés, vágás</span></div></button>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="ai">
+  <div class="wrap">
+    <div class="eyebrow">AI és rendszerek</div>
+    <h2 class="display">Amit magam építek</h2>
+    <p class="intro">2026-ban AI-asszisztált fejlesztéssel egyedül építettem fel egy marketing- és ügyfélkezelő rendszert (Mingello): lead-kezelés, ajánlatkészítés, automata email- és SMS-sorozatok, landingoldalak mérésekkel, Meta Pixel és Conversions API, AI-alapú tartalom- és hirdetéstervezés. Az alábbi termékvideókat is kódból készítettem, kamera nélkül.</p>
+    <div class="ai">
+      <figure class="clip"><video src="video/1-tudasbazis-script.mp4" muted loop playsinline preload="none" aria-label="Termékvideó: tudásbázis és forgatókönyv"></video><p>Tudásbázis → videós forgatókönyv AI-jal</p></figure>
+      <figure class="clip"><video src="video/2-tolcser-uzleti-terv.mp4" muted loop playsinline preload="none" aria-label="Termékvideó: tölcsér és üzleti terv"></video><p>Marketingtölcsér és üzleti terv</p></figure>
+      <figure class="clip"><video src="video/3-lead-ajanlat.mp4" muted loop playsinline preload="none" aria-label="Termékvideó: lead és ajánlat"></video><p>Lead-kezelés és ajánlatkészítés</p></figure>
+      <figure class="clip"><video src="video/4-skool-classroom.mp4" muted loop playsinline preload="none" aria-label="Termékvideó: videós kurzus"></video><p>Videós kurzus a rendszerhez</p></figure>
+      <figure class="clip"><video src="video/5-coworking-meet.mp4" muted loop playsinline preload="none" aria-label="Termékvideó: foglalás és online meeting"></video><p>Foglalás és online meeting</p></figure>
+    </div>
+    <div class="stack">
+      <span>Claude és más AI-asszisztensek</span><span>AI-videógenerálás</span><span>Kódból készített videó (Remotion)</span><span>Next.js</span><span>Supabase</span><span>Meta Pixel + Conversions API</span><span>Email- és SMS-automatizáció</span><span>Adobe Premiere Pro</span><span>Notion</span>
+    </div>
+  </div>
+</section>
+
+<footer id="kapcsolat">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--lemon)">Kapcsolat</div>
+    <h2 class="display">Beszéljünk</h2>
+    <p>Marketingvezetői, stratégiai vagy kreatív vezetői szerepet keresek egy növekvő csapatban. Referenciaszemélyek kérésre elérhetők.</p>
+    <div class="links">
+      <a class="btn" href="mailto:velkei.otto@gmail.com">velkei.otto@gmail.com</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/ottovelkei/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn ghost" href="Velkei_Otto_CV.pdf" download>CV letöltése (PDF)</a>
+    </div>
+    <small>© 2026 Velkei Ottó · Budapest</small>
+  </div>
+</footer>
+
+<dialog id="player" aria-label="Videólejátszó">
+  <button class="close" type="button">Bezárás ✕</button>
+  <div class="frame"></div>
+  <a class="yt" target="_blank" rel="noopener">Megnyitás a YouTube-on ↗</a>
+</dialog>
+
+<script>
+  // Videólejátszó: kattintásra YouTube-beágyazás egy ablakban (addig nem tölt be semmit a YouTube-ról)
+  const dlg = document.getElementById('player');
+  const frame = dlg.querySelector('.frame');
+  const yt = dlg.querySelector('.yt');
+  const close = () => { frame.innerHTML = ''; if (dlg.open) dlg.close(); };
+  document.querySelectorAll('[data-yt]').forEach(b => b.addEventListener('click', () => {
+    const id = b.dataset.yt;
+    frame.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen title="Videó"></iframe>';
+    yt.href = 'https://www.youtube.com/watch?v=' + id;
+    if (typeof dlg.showModal === 'function') dlg.showModal(); else window.open(yt.href, '_blank');
+  }));
+  dlg.querySelector('.close').addEventListener('click', close);
+  dlg.addEventListener('click', e => { if (e.target === dlg) close(); });
+  dlg.addEventListener('close', () => { frame.innerHTML = ''; });
+
+  // Termékvideók: csak akkor töltenek és játszanak, amikor látszanak
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const io = new IntersectionObserver(entries => entries.forEach(en => {
+    const v = en.target;
+    if (en.isIntersecting) { if (v.preload === 'none') { v.preload = 'auto'; } if (!reduce) v.play().catch(() => {}); }
+    else v.pause();
+  }), { threshold: .35 });
+  document.querySelectorAll('.clip video').forEach(v => { if (reduce) v.controls = true; io.observe(v); });
+</script>
+</body>
+</html>
