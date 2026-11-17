@@ -31,6 +31,11 @@
   .btn { display: inline-flex; align-items: center; gap: 8px; background: var(--dark); color: #fff; text-decoration: none; font-weight: 700; font-size: 15px; padding: 12px 20px; border-radius: 999px; transition: transform .15s; }
   .btn:hover { transform: translateY(-1px); }
   .btn.ghost { background: transparent; color: var(--ink); border: 1.5px solid var(--ink); }
+  nav .contact { display: flex; gap: 18px; font-size: 14px; font-weight: 700; margin-left: auto; }
+  nav .contact a { text-decoration: none; display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+  nav .contact a:hover .tx { text-decoration: underline; }
+  nav .contact .ic { font-size: 15px; }
+  @media (max-width: 1060px) { nav .contact .tx { display: none; } nav .contact .ic { display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: #fff; font-size: 16px; } nav .contact { gap: 8px; } }
   nav .btn { padding: 8px 16px; font-size: 14px; }
 
   /* hero */
@@ -55,6 +60,7 @@
   .num small { display: block; color: var(--mute); font-size: 13px; margin-top: 2px; }
 
   section.block { padding: 88px 0 0; }
+  body > section.block:last-of-type { padding-bottom: 96px; }
   .eyebrow { font-size: 13px; font-weight: 800; letter-spacing: 1.6px; text-transform: uppercase; color: var(--acc); }
   h2.display { font-size: clamp(40px, 6vw, 72px); margin-top: 8px; }
   .intro { color: var(--mute); max-width: none; margin-top: 14px; font-size: 18px; }
@@ -166,8 +172,8 @@
       <li><a href="#esetek">Esettanulmányok</a></li>
       <li><a href="#filmek">Filmek</a></li>
       <li><a href="#ai">AI és rendszerek</a></li>
-      <li><a href="#kapcsolat">Kapcsolat</a></li>
     </ul>
+    <div class="contact"><a href="mailto:velkei.otto@gmail.com"><span class="ic" aria-hidden="true">✉</span><span class="tx">velkei.otto@gmail.com</span></a><a href="tel:+36307214914"><span class="ic" aria-hidden="true">☎</span><span class="tx">+36 30 721 4914</span></a></div>
     <a class="btn" href="Velkei_Otto_CV.pdf" download>CV letöltése</a>
   </div>
 </nav>
@@ -275,19 +281,6 @@
   </div>
 </section>
 
-<footer id="kapcsolat">
-  <div class="wrap">
-    <div class="eyebrow" style="color:var(--lemon)">Kapcsolat</div>
-    <h2 class="display">Beszéljünk</h2>
-    <p>Szeretném a tudásomat a legjobb helyen kamatoztatni.</p>
-    <div class="links">
-      <a class="btn" href="mailto:velkei.otto@gmail.com">velkei.otto@gmail.com</a>
-      <a class="btn ghost" href="https://www.linkedin.com/in/ottovelkei/" target="_blank" rel="noopener">LinkedIn</a>
-      <a class="btn ghost" href="Velkei_Otto_CV.pdf" download>CV letöltése (PDF)</a>
-    </div>
-    <small>© 2026 Velkei Ottó · Budapest</small>
-  </div>
-</footer>
 
 <dialog id="player" aria-label="Videólejátszó">
   <button class="close" type="button">Bezárás ✕</button>
