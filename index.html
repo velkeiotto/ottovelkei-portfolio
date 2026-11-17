@@ -78,6 +78,7 @@
   .case dl { margin-top: 20px; display: grid; gap: 12px; }
   .case dt { font-size: 12px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; color: var(--mute); }
   .case dd { font-size: 16px; }
+  .case .txt { margin-top: 16px; font-size: 16px; }
   .case .more { display: inline-block; margin-top: 20px; font-weight: 800; color: var(--acc); }
 
   /* films */
@@ -107,6 +108,8 @@
   .clip p { padding: 12px 16px 14px; font-size: 15px; font-weight: 700; }
   .stack { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
   .stack span { background: var(--card); border-radius: 999px; padding: 6px 14px; font-size: 14px; font-weight: 700; }
+
+  .more-link { font-weight: 800; color: var(--acc); white-space: nowrap; }
 
   /* contact */
   footer { margin-top: 96px; background: var(--dark); color: #fff; }
@@ -167,30 +170,21 @@
       <div class="eyebrow">Portfólió · 2026</div>
       <h1 class="display">Velkei<br>Ottó</h1>
       <div class="role"><span>Marketingvezető</span><span>AI-alapú marketingrendszerek</span><span>Prémium tartalomgyártás</span></div>
-      <p class="lead">Egy kézben tartom a stratégiát, a kreatív gyártást, a hirdetést és a mérést, a munkámban pedig napi szinten használok AI-eszközöket. Itt azt mutatom meg, ami ebből kijött: számokkal és filmekkel.</p>
+      <p class="lead">Videósként kezdtem, ma marketingvezetőként, specialistaként dolgozom. Értem, mitől lesz jó egy tartalom és azt is, hogy mikor lesz belőle rendelés.</p>
       <div class="cta">
         <a class="btn" href="#esetek">Esettanulmányok</a>
         <a class="btn ghost" href="#filmek">Filmek megnézése</a>
       </div>
     </div>
-    <figure class="photo"><img src="img/otto-forgatas.webp" alt="Velkei Ottó forgatás közben, kamerával" width="534" height="534"><figcaption>Forgatáson</figcaption></figure>
+    <figure class="photo"><img src="img/otto-forgatas.webp" alt="Velkei Ottó forgatás közben, kamerával" width="534" height="534"></figure>
   </div>
 </header>
 
-<div class="wrap">
-  <div class="nums">
-    <div class="num"><b>~100 M Ft</b><span>éves árbevétel</span><small>LEMONart, 2022–2025</small></div>
-    <div class="num"><b>+100%</b><span>online rendelésnövekedés</span><small>Puzzies, karácsony 2025</small></div>
-    <div class="num"><b>150+</b><span>ügyfél tartalomgyártása</span><small>pl. Siemens Energy, Algida, Grundfos</small></div>
-    <div class="num"><b>4,9 M Ft</b><span>bevétel 137 e Ft hirdetésből</span><small>Wiesner &amp; Snír, 3 hónap</small></div>
-  </div>
-</div>
 
 <section class="block" id="esetek">
   <div class="wrap">
     <div class="eyebrow">Esettanulmányok</div>
-    <h2 class="display">Ami kijött belőle</h2>
-    <p class="intro">Három eset, három különböző feladat: egy országos szezonális kampány, egy prémium képzés ügyfélszerzése kis keretből és egy ügynökség saját leadgépe.</p>
+    <h2 class="display">Kampányok és eredmények</h2>
 
     <article class="case">
       <div class="media"><img src="img/puzzies-metro.jpg" alt="Puzzies karácsonyi plakát a budapesti metróban" loading="lazy"></div>
@@ -199,11 +193,7 @@
         <h3>Karácsonyi kampány, amely megduplázta a rendeléseket</h3>
         <div class="big">15 000 → 30 000</div>
         <div class="bigl">online rendelés a 2 hónapos szezonban</div>
-        <dl>
-          <dt>Feladat</dt><dd>A karácsonyi szezon online eladásainak növelése 2 hónap alatt.</dd>
-          <dt>Megoldás</dt><dd>Integrált kampány: 70 social videó 4 platformon, 59 köztéri és plázamegjelenés, 10 televíziós megjelenés, 4 PR-cikk és influencerek. A 7 fős stábot egy általam felépített Notion-rendszerben irányítottam, napi szinten.</dd>
-          <dt>Eredmény</dt><dd>30&nbsp;000 rendelés, 4 millió videómegtekintés és 100&nbsp;000 interakció a 3 hetes fő szakaszban.</dd>
-        </dl>
+        <p class="txt">A 2025-ös karácsonyi kampányt vezettem a stratégiától a riportig, egy 7 fős csapattal, amelyet egy saját Notion-rendszerben irányítottam. 70 social videó 4 platformon, 59 köztéri és plázamegjelenés, 10 televíziós megjelenés, 4 PR-cikk és influencerek.</p><p class="txt">A 3 hetes fő kampányszakaszban a videók 4 millió megtekintést és 100&nbsp;000 interakciót hoztak.</p>
         <a class="more" href="https://defiant-repair-b19.notion.site/2025-PUZZIES-KAR-CSONYI-KAMP-NY-EREDM-NYEK-2d8a2aa2ee8780a58835e8157bfa4cf2" target="_blank" rel="noopener">A teljes kampányriport →</a>
       </div>
     </article>
@@ -215,14 +205,10 @@
       </div>
       <div class="body">
         <div class="tag">Wiesner &amp; Snír Academy · 2026 · saját rendszerrel</div>
-        <h3>Prémium képzés ügyfélszerzése kis hirdetési keretből</h3>
+        <h3>Coachképzés ügyfélszerzése kis hirdetési keretből</h3>
         <div class="big">4,9 M Ft</div>
         <div class="bigl">nettó bevétel 137&nbsp;000&nbsp;Ft hirdetési költésből, 3 hónap alatt</div>
-        <dl>
-          <dt>Feladat</dt><dd>Kiszámítható jelentkezők egy prémium coachképzésre, kis költségvetésből.</dd>
-          <dt>Megoldás</dt><dd>Landingoldal, Meta-hirdetések, automata email- és SMS-sorozat és lead-követés, mind a saját fejlesztésű marketingrendszeremben (Mingello).</dd>
-          <dt>Eredmény</dt><dd>88 érdeklődő, 7 beiratkozó, 1 érdeklődő ~1&nbsp;560&nbsp;Ft-ba került.</dd>
-        </dl>
+        <p class="txt">Landingoldal, Meta-hirdetések, automata email- és SMS-sorozat és lead-követés, mind a saját fejlesztésű rendszeremben (Mingello).</p><p class="txt">88 érdeklődő jelentkezett, közülük 7-en iratkoztak be a képzésre.</p>
         <a class="more" href="https://wiesnersnir.mingello.com/coachkepzes" target="_blank" rel="noopener">Az élő landingoldal →</a>
       </div>
     </article>
@@ -231,14 +217,10 @@
       <div class="media logo"><img src="img/lemonart.png" alt="LEMONart logó" loading="lazy"></div>
       <div class="body">
         <div class="tag">LEMONart · 2022–2025 · alapító, tartalomgyártási vezető</div>
-        <h3>Egy induló ügynökség saját leadgépe</h3>
-        <div class="big">100–150 lead / hó</div>
+        <h3>Saját ügyfélszerzés egy induló ügynökségnek</h3>
+        <div class="big">100–150 lead/hó</div>
         <div class="bigl">2 éven át, kb. 4&nbsp;000–6&nbsp;000&nbsp;Ft/lead</div>
-        <dl>
-          <dt>Feladat</dt><dd>Folyamatos ügyfélszerzés egy induló tartalommarketing-ügynökségnek.</dd>
-          <dt>Megoldás</dt><dd>Saját hirdetési és tartalommarketing-rendszer havi 600&nbsp;000&nbsp;Ft-os kerettel, mérésre építve.</dd>
-          <dt>Eredmény</dt><dd>150+ ügyfél (köztük Siemens Energy, Algida, Grundfos, Metrodom, Indepack), évi ~100 millió Ft árbevétel és 10 fős kreatív csapat. 2025-ben a cégirányítást átadtam a Follow Marketingnek.</dd>
-        </dl>
+        <p class="txt">Az ügynökség ügyfélszerzését én vittem, havi 600&nbsp;000 Ft-os hirdetési kerettel. Mellette a tartalomgyártásért feleltem: több mint 150 ügyfélnek gyártottunk tartalmat, köztük a Siemens Energynek, az Algidának és a Grundfosnak.</p><p class="txt">3 év alatt kb. 100 millió Ft éves árbevételig és 10 fős csapatig jutottunk. 2025-ben a cégirányítást átadtam a Follow Marketingnek.</p>
         <a class="more" href="https://lemonart.hu/" target="_blank" rel="noopener">lemonart.hu →</a>
       </div>
     </article>
@@ -249,14 +231,14 @@
   <div class="wrap">
     <div class="eyebrow">Filmek</div>
     <h2 class="display">Rendezés, operatőri munka, vágás</h2>
-    <p class="intro">Tíz éve videózom: segédoperatőrként kezdtem, dolgoztam az M4 Sport magazinműsorain, azóta pedig rendezőként készítek imázsfilmeket, aftermovie-kat, reklámot és dokumentumfilmet. Kattints egy filmre a lejátszáshoz.</p>
+    <p class="intro">Tíz éve videózom: segédoperatőrként kezdtem, dolgoztam az M4 Sport magazinműsorain, azóta pedig rendezőként készítek imázsfilmeket, aftermovie-kat és reklámot. Kattints egy filmre a lejátszáshoz.</p>
 
     <div class="featured">
       <button class="film thumb" data-yt="gdr2qHdloy8" aria-label="Grafton – 30 év imázsfilm lejátszása" style="border-radius:0"><img src="img/refs/gdr2qHdloy8.jpg" alt="Grafton – 30 év" loading="lazy"></button>
       <div class="body">
         <div class="eyebrow" style="color:var(--lemon)">Kiemelt imázsfilm</div>
         <h3>Grafton – 30 év, több ezer megváltoztatott élet</h3>
-        <p>A Grafton Recruitment 30. évfordulójára készült film a cégről és arról, milyen ott dolgozni. Egy nap forgatás, másnapra kész film.</p>
+        <p>A Grafton Recruitment 30. évfordulójára készült film a cégről és arról, milyen ott dolgozni.</p>
         <blockquote>„A projekteket nem a script megírásával kezdi, hanem az ügyfél megértésével.”<cite>Tőzsér Anna, marketing specialist – Gi Group Holding</cite></blockquote>
         <blockquote>„Már az első pillanatban érezte, hogy milyen tematikát szeretnénk a videóval, milyen hangulatot szeretnénk megalkotni.”<cite>Farkas Tamás, Business Manager – Grafton</cite></blockquote>
       </div>
@@ -279,10 +261,9 @@
       <button class="film" data-yt="Ty4lKxnPxD0"><div class="thumb"><img src="img/refs/Ty4lKxnPxD0.jpg" alt="" loading="lazy"></div><div class="meta"><b>Csapatépítő</b><span>aftermovie · 4:14</span></div></button>
     </div>
 
-    <h4 class="sub">Reklám és dokumentumfilm</h4>
+    <h4 class="sub">Reklám</h4>
     <div class="grid">
       <button class="film" data-yt="Sd1O7PkeVOM"><div class="thumb"><img src="img/szalon.png" alt="" loading="lazy"></div><div class="meta"><b>Pécsi Szalon Sör</b><span>TV-reklám · rendezés, vágás, médiavásárlás</span></div></button>
-      <button class="film" data-yt="0kTje_qanhY"><div class="thumb"><img src="img/kispal.png" alt="" loading="lazy"></div><div class="meta"><b>Kispál és a Borz</b><span>dokumentumfilm · féléves forgatás, rendezés, vágás</span></div></button>
     </div>
   </div>
 </section>
@@ -291,16 +272,11 @@
   <div class="wrap">
     <div class="eyebrow">AI és rendszerek</div>
     <h2 class="display">Amit magam építek</h2>
-    <p class="intro">2026-ban AI-asszisztált fejlesztéssel egyedül építettem fel egy marketing- és ügyfélkezelő rendszert (Mingello): lead-kezelés, ajánlatkészítés, automata email- és SMS-sorozatok, landingoldalak mérésekkel, Meta Pixel és Conversions API, AI-alapú tartalom- és hirdetéstervezés. Az alábbi termékvideókat is kódból készítettem, kamera nélkül.</p>
+    <p class="intro">2026-ban AI segítségével egyedül fejlesztettem le egy marketing- és ügyfélkezelő rendszert kisvállalkozásoknak: lead-kezelés, ajánlatkészítés, automata email- és SMS-sorozatok, landingoldalak mérésekkel, Meta Pixel és Conversions API. Az alábbi termékvideókat is én készítettem, kódból. <a class="more-link" href="https://mingello.com" target="_blank" rel="noopener">mingello.com ↗</a></p>
     <div class="ai">
-      <figure class="clip"><video src="video/1-tudasbazis-script.mp4" muted loop playsinline preload="none" aria-label="Termékvideó: tudásbázis és forgatókönyv"></video><p>Tudásbázis → videós forgatókönyv AI-jal</p></figure>
+      <figure class="clip"><video src="video/1-tudasbazis-script.mp4" muted loop playsinline preload="none" aria-label="Termékvideó: tudásbázis és forgatókönyv"></video><p>Tudásbázisból videós forgatókönyv</p></figure>
       <figure class="clip"><video src="video/2-tolcser-uzleti-terv.mp4" muted loop playsinline preload="none" aria-label="Termékvideó: tölcsér és üzleti terv"></video><p>Marketingtölcsér és üzleti terv</p></figure>
       <figure class="clip"><video src="video/3-lead-ajanlat.mp4" muted loop playsinline preload="none" aria-label="Termékvideó: lead és ajánlat"></video><p>Lead-kezelés és ajánlatkészítés</p></figure>
-      <figure class="clip"><video src="video/4-skool-classroom.mp4" muted loop playsinline preload="none" aria-label="Termékvideó: videós kurzus"></video><p>Videós kurzus a rendszerhez</p></figure>
-      <figure class="clip"><video src="video/5-coworking-meet.mp4" muted loop playsinline preload="none" aria-label="Termékvideó: foglalás és online meeting"></video><p>Foglalás és online meeting</p></figure>
-    </div>
-    <div class="stack">
-      <span>Claude és más AI-asszisztensek</span><span>AI-videógenerálás</span><span>Kódból készített videó (Remotion)</span><span>Next.js</span><span>Supabase</span><span>Meta Pixel + Conversions API</span><span>Email- és SMS-automatizáció</span><span>Adobe Premiere Pro</span><span>Notion</span>
     </div>
   </div>
 </section>
@@ -309,7 +285,7 @@
   <div class="wrap">
     <div class="eyebrow" style="color:var(--lemon)">Kapcsolat</div>
     <h2 class="display">Beszéljünk</h2>
-    <p>Marketingvezetői, stratégiai vagy kreatív vezetői szerepet keresek egy növekvő csapatban. Referenciaszemélyek kérésre elérhetők.</p>
+    <p>Szeretném a tudásomat a legjobb helyen kamatoztatni.</p>
     <div class="links">
       <a class="btn" href="mailto:velkei.otto@gmail.com">velkei.otto@gmail.com</a>
       <a class="btn ghost" href="https://www.linkedin.com/in/ottovelkei/" target="_blank" rel="noopener">LinkedIn</a>
